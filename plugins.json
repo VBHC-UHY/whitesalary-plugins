@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-01-16T22:24:07Z",
-  "total_count": 13,
+  "last_updated": "2026-01-16T22:24:16Z",
+  "total_count": 12,
   "plugins": [
     {
       "id": "daily_fortune",
@@ -430,22 +430,6 @@
       "rating": 4.6,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/zodiac"
-    },
-    {
-      "id": "test_plugin_1768573443",
-      "name": "Test Plugin",
-      "cn_name": "测试插件",
-      "version": "1.0.0",
-      "author": "TestUser",
-      "author_key": "d8412aa657953383",
-      "description": "这是一个测试插件，用于验证添加功能",
-      "category": "实用工具",
-      "featured": false,
-      "commands": [
-        "测试",
-        "test"
-      ],
-      "created_at": "2026-01-16"
     }
   ]
 }
