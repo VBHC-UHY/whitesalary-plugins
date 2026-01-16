@@ -1,0 +1,11 @@
+{
+  "id": "countdown",
+  "name": "countdown",
+  "cn_name": "倒数计时",
+  "version": "1.0.0",
+  "author": "WhiteSalary",
+  "description": "计算距离特定日期还有多少天",
+  "category": "天气日历",
+  "triggers": ["倒数", "还有几天", "距离"]
+}
+

@@ -1,0 +1,11 @@
+{
+  "id": "quote_gen",
+  "name": "quote_gen",
+  "cn_name": "名言生成",
+  "version": "1.0.0",
+  "author": "WhiteSalary",
+  "description": "随机生成励志名言、毒鸡汤或名人名言",
+  "category": "娱乐游戏",
+  "triggers": ["名言", "鸡汤", "励志"]
+}
+

@@ -1,0 +1,11 @@
+{
+  "id": "kaomoji",
+  "name": "kaomoji",
+  "cn_name": "颜文字生成",
+  "version": "1.0.0",
+  "author": "WhiteSalary",
+  "description": "生成各种可爱的颜文字表情",
+  "category": "社交互动",
+  "triggers": ["颜文字", "表情", "kaomoji"]
+}
+

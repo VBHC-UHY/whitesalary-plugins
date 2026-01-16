@@ -1,0 +1,11 @@
+{
+  "id": "rainbow_fart",
+  "name": "rainbow_fart",
+  "cn_name": "彩虹屁生成",
+  "version": "1.0.0",
+  "author": "WhiteSalary",
+  "description": "生成各种花式夸人彩虹屁",
+  "category": "社交互动",
+  "triggers": ["夸我", "彩虹屁", "夸夸"]
+}
+

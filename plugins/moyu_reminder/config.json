@@ -1,0 +1,11 @@
+{
+  "id": "moyu_reminder",
+  "name": "moyu_reminder",
+  "cn_name": "摸鱼提醒",
+  "version": "1.0.0",
+  "author": "WhiteSalary",
+  "description": "摸鱼人专属！提醒你今天是周几，距离周末还有多久",
+  "category": "实用工具",
+  "triggers": ["摸鱼", "周末", "下班"]
+}
+

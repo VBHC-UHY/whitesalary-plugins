@@ -1,0 +1,11 @@
+{
+  "id": "calculator",
+  "name": "calculator",
+  "cn_name": "计算器",
+  "version": "1.0.0",
+  "author": "WhiteSalary",
+  "description": "数学计算器，支持基础运算和科学计算",
+  "category": "实用工具",
+  "triggers": ["计算", "算一下"]
+}
+

@@ -1,0 +1,11 @@
+{
+  "id": "translator",
+  "name": "translator",
+  "cn_name": "快速翻译",
+  "version": "1.0.0",
+  "author": "WhiteSalary",
+  "description": "中英文快速互译",
+  "category": "翻译语言",
+  "triggers": ["翻译", "translate"]
+}
+

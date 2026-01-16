@@ -1,0 +1,11 @@
+{
+  "id": "random_choice",
+  "name": "random_choice",
+  "cn_name": "随机选择",
+  "version": "1.0.0",
+  "author": "WhiteSalary",
+  "description": "帮你做选择！支持多选项随机抽取",
+  "category": "实用工具",
+  "triggers": ["帮我选", "随机选择", "选一个"]
+}
+
