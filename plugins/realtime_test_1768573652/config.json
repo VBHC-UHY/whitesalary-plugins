@@ -1,0 +1,16 @@
+{
+  "id": "realtime_test_1768573652",
+  "name": "Realtime Test",
+  "cn_name": "实时测试插件",
+  "version": "1.0.0",
+  "author": "TestBot",
+  "description": "用于测试实时更新功能的插件",
+  "category": "实用工具",
+  "featured": true,
+  "downloads": 999,
+  "rating": "5.0",
+  "commands": [
+    "实时测试"
+  ],
+  "created_at": "2026-01-16"
+}
