@@ -1,0 +1,23 @@
+{
+    "id": "dice_roll",
+    "name": "Dice Roll",
+    "cn_name": "骰子",
+    "version": "1.0.0",
+    "author": "WhiteSalary",
+    "description": "支持多种骰子的投掷功能，可用于桌游或决策",
+    "full_description": "骰子插件为白添加了掷骰子功能，支持各种骰子类型（D4、D6、D8、D10、D12、D20等），可用于桌游、决策或纯粹的娱乐。支持多骰子投掷和自定义面数。",
+    "category": "娱乐",
+    "keywords": ["骰子", "掷骰", "dice", "roll", "桌游"],
+    "triggers": ["掷骰子", "投骰子", "roll", "扔骰子"],
+    "features": [
+        "🎲 多种骰子类型支持",
+        "🔢 支持多骰子同时投掷",
+        "⚙️ 自定义骰子面数",
+        "📊 投掷结果统计"
+    ],
+    "usage": "对白说「掷骰子」「投1d20」「扔3个六面骰」等即可触发",
+    "commands": ["掷骰子", "投骰子", "roll", "1d6", "2d20"],
+    "changelog": "v1.0.0 - 初始版本，支持基础骰子投掷",
+    "featured": true
+}
+
