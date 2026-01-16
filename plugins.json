@@ -37,8 +37,8 @@
       ],
       "changelog": "v1.0.0 - 初始版本",
       "notes": "运势仅供娱乐参考",
-      "downloads": 2853,
-      "rating": 4.7,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": true,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/daily_fortune"
     },
@@ -73,8 +73,8 @@
       ],
       "changelog": "v1.0.0 - 初始版本",
       "notes": "天气数据为模拟数据",
-      "downloads": 3381,
-      "rating": 4.7,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": true,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/weather"
     },
@@ -109,8 +109,8 @@
         "1d6"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 4316,
-      "rating": 4.5,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": true,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/dice_roll"
     },
@@ -144,8 +144,8 @@
         "随机选择"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 1892,
-      "rating": 4.8,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/random_choice"
     },
@@ -179,8 +179,8 @@
         "距离XX还有几天"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 1245,
-      "rating": 4.6,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/countdown"
     },
@@ -215,8 +215,8 @@
         "夸夸我"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 3567,
-      "rating": 4.9,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/rainbow_fart"
     },
@@ -251,8 +251,8 @@
         "难过表情"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 2134,
-      "rating": 4.7,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/kaomoji"
     },
@@ -286,8 +286,8 @@
         "摸鱼日历"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 4521,
-      "rating": 4.9,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/moyu_reminder"
     },
@@ -322,8 +322,8 @@
         "励志名言"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 1876,
-      "rating": 4.5,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/quote_gen"
     },
@@ -357,8 +357,8 @@
         "翻译成中文"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 2943,
-      "rating": 4.6,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/translator"
     },
@@ -391,8 +391,8 @@
         "算一下"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 1567,
-      "rating": 4.4,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/calculator"
     },
@@ -426,8 +426,8 @@
         "星座运势"
       ],
       "changelog": "v1.0.0 - 初始版本",
-      "downloads": 2341,
-      "rating": 4.6,
+      "downloads": 0,
+      "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/zodiac"
     }
