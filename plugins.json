@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-01-16T22:24:16Z",
-  "total_count": 12,
+  "last_updated": "2026-01-16T22:27:37Z",
+  "total_count": 13,
   "plugins": [
     {
       "id": "daily_fortune",
@@ -430,6 +430,22 @@
       "rating": 4.6,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/zodiac"
+    },
+    {
+      "id": "realtime_test_1768573652",
+      "name": "Realtime Test",
+      "cn_name": "实时测试插件",
+      "version": "1.0.0",
+      "author": "TestBot",
+      "description": "用于测试实时更新功能的插件",
+      "category": "实用工具",
+      "featured": true,
+      "downloads": 999,
+      "rating": "5.0",
+      "commands": [
+        "实时测试"
+      ],
+      "created_at": "2026-01-16"
     }
   ]
 }
