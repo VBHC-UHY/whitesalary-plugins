@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-01-16",
-  "total_count": 12,
+  "last_updated": "2026-01-16T22:24:07Z",
+  "total_count": 13,
   "plugins": [
     {
       "id": "daily_fortune",
@@ -12,11 +12,29 @@
       "description": "每天为用户生成专属运势预测，包含运势、幸运数字、幸运颜色",
       "full_description": "每日运势插件为白提供了生成个性化每日运势的能力。每天为用户生成独特的运势预测，包括整体运势、爱情运势、财运、事业运势等多个维度，让白成为用户的专属运势顾问。",
       "category": "娱乐游戏",
-      "keywords": ["运势", "算命", "占卜", "fortune"],
-      "triggers": ["今日运势", "运势", "算卦", "今天运气"],
-      "features": ["🔮 多维度运势预测", "🎨 幸运颜色推荐", "🔢 幸运数字生成"],
+      "keywords": [
+        "运势",
+        "算命",
+        "占卜",
+        "fortune"
+      ],
+      "triggers": [
+        "今日运势",
+        "运势",
+        "算卦",
+        "今天运气"
+      ],
+      "features": [
+        "🔮 多维度运势预测",
+        "🎨 幸运颜色推荐",
+        "🔢 幸运数字生成"
+      ],
       "usage": "对白说「今日运势」即可",
-      "commands": ["今日运势", "运势", "算卦"],
+      "commands": [
+        "今日运势",
+        "运势",
+        "算卦"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "notes": "运势仅供娱乐参考",
       "downloads": 2853,
@@ -33,11 +51,26 @@
       "description": "查询指定城市的天气（模拟数据）",
       "full_description": "天气查询插件让白能够查询全国各地的实时天气信息。支持查询当前天气、温度、湿度等信息。",
       "category": "天气日历",
-      "keywords": ["天气", "气温", "weather"],
-      "triggers": ["天气", "气温", "温度"],
-      "features": ["🌡️ 实时天气查询", "💨 风力湿度信息", "🌍 支持多城市"],
+      "keywords": [
+        "天气",
+        "气温",
+        "weather"
+      ],
+      "triggers": [
+        "天气",
+        "气温",
+        "温度"
+      ],
+      "features": [
+        "🌡️ 实时天气查询",
+        "💨 风力湿度信息",
+        "🌍 支持多城市"
+      ],
       "usage": "对白说「北京天气」即可",
-      "commands": ["天气", "XX天气"],
+      "commands": [
+        "天气",
+        "XX天气"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "notes": "天气数据为模拟数据",
       "downloads": 3381,
@@ -54,11 +87,27 @@
       "description": "掷骰子游戏，支持自定义骰子数量和面数",
       "full_description": "骰子插件为白添加了掷骰子功能，支持各种骰子类型，可用于桌游、决策或纯粹的娱乐。",
       "category": "娱乐游戏",
-      "keywords": ["骰子", "掷骰", "dice"],
-      "triggers": ["掷骰子", "投骰子", "roll"],
-      "features": ["🎲 多种骰子支持", "🔢 自定义面数", "📊 结果统计"],
+      "keywords": [
+        "骰子",
+        "掷骰",
+        "dice"
+      ],
+      "triggers": [
+        "掷骰子",
+        "投骰子",
+        "roll"
+      ],
+      "features": [
+        "🎲 多种骰子支持",
+        "🔢 自定义面数",
+        "📊 结果统计"
+      ],
       "usage": "对白说「掷骰子」或「roll 2d6」",
-      "commands": ["掷骰子", "roll", "1d6"],
+      "commands": [
+        "掷骰子",
+        "roll",
+        "1d6"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 4316,
       "rating": 4.5,
@@ -74,11 +123,26 @@
       "description": "帮你做选择！支持多选项随机抽取",
       "full_description": "当你犹豫不决时，让白帮你做选择！支持输入多个选项，随机抽取一个结果。",
       "category": "实用工具",
-      "keywords": ["随机", "选择", "抽签"],
-      "triggers": ["帮我选", "随机选择", "选一个"],
-      "features": ["🎯 多选项支持", "⚡ 快速决策", "🔀 公平随机"],
+      "keywords": [
+        "随机",
+        "选择",
+        "抽签"
+      ],
+      "triggers": [
+        "帮我选",
+        "随机选择",
+        "选一个"
+      ],
+      "features": [
+        "🎯 多选项支持",
+        "⚡ 快速决策",
+        "🔀 公平随机"
+      ],
       "usage": "对白说「帮我选 吃火锅 吃烧烤 吃面条」",
-      "commands": ["帮我选", "随机选择"],
+      "commands": [
+        "帮我选",
+        "随机选择"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 1892,
       "rating": 4.8,
@@ -94,11 +158,26 @@
       "description": "计算距离特定日期还有多少天",
       "full_description": "倒数计时插件可以帮你计算距离某个重要日期还有多少天，比如生日、节日、考试等。",
       "category": "天气日历",
-      "keywords": ["倒数", "计时", "日期"],
-      "triggers": ["倒数", "还有几天", "距离"],
-      "features": ["📅 日期计算", "⏰ 精确到天", "🎯 重要日期提醒"],
+      "keywords": [
+        "倒数",
+        "计时",
+        "日期"
+      ],
+      "triggers": [
+        "倒数",
+        "还有几天",
+        "距离"
+      ],
+      "features": [
+        "📅 日期计算",
+        "⏰ 精确到天",
+        "🎯 重要日期提醒"
+      ],
       "usage": "对白说「距离2026年春节还有几天」",
-      "commands": ["倒数", "距离XX还有几天"],
+      "commands": [
+        "倒数",
+        "距离XX还有几天"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 1245,
       "rating": 4.6,
@@ -114,11 +193,27 @@
       "description": "生成各种花式夸人彩虹屁",
       "full_description": "彩虹屁生成器，让白用各种花式语言夸奖你或你指定的人，适合发朋友圈或哄人开心。",
       "category": "社交互动",
-      "keywords": ["彩虹屁", "夸人", "表扬"],
-      "triggers": ["夸我", "彩虹屁", "夸夸"],
-      "features": ["🌈 多种风格", "💬 随机生成", "😊 正能量满满"],
+      "keywords": [
+        "彩虹屁",
+        "夸人",
+        "表扬"
+      ],
+      "triggers": [
+        "夸我",
+        "彩虹屁",
+        "夸夸"
+      ],
+      "features": [
+        "🌈 多种风格",
+        "💬 随机生成",
+        "😊 正能量满满"
+      ],
       "usage": "对白说「夸我」或「给XX一个彩虹屁」",
-      "commands": ["夸我", "彩虹屁", "夸夸我"],
+      "commands": [
+        "夸我",
+        "彩虹屁",
+        "夸夸我"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 3567,
       "rating": 4.9,
@@ -134,11 +229,27 @@
       "description": "生成各种可爱的颜文字表情",
       "full_description": "颜文字生成器，收录了数百种可爱的颜文字表情，按心情分类，随时调用。",
       "category": "社交互动",
-      "keywords": ["颜文字", "表情", "kaomoji"],
-      "triggers": ["颜文字", "表情", "kaomoji"],
-      "features": ["😊 多种表情", "🎭 按心情分类", "📋 一键复制"],
+      "keywords": [
+        "颜文字",
+        "表情",
+        "kaomoji"
+      ],
+      "triggers": [
+        "颜文字",
+        "表情",
+        "kaomoji"
+      ],
+      "features": [
+        "😊 多种表情",
+        "🎭 按心情分类",
+        "📋 一键复制"
+      ],
       "usage": "对白说「来个开心的颜文字」",
-      "commands": ["颜文字", "开心表情", "难过表情"],
+      "commands": [
+        "颜文字",
+        "开心表情",
+        "难过表情"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 2134,
       "rating": 4.7,
@@ -154,11 +265,26 @@
       "description": "摸鱼人专属！提醒你今天是周几，距离周末还有多久",
       "full_description": "专为打工人设计的摸鱼提醒插件，告诉你今天周几、距离下班还有多久、距离周末还有几天。",
       "category": "实用工具",
-      "keywords": ["摸鱼", "打工", "周末"],
-      "triggers": ["摸鱼", "周末", "下班"],
-      "features": ["🐟 摸鱼日历", "⏰ 下班倒计时", "🎉 周末提醒"],
+      "keywords": [
+        "摸鱼",
+        "打工",
+        "周末"
+      ],
+      "triggers": [
+        "摸鱼",
+        "周末",
+        "下班"
+      ],
+      "features": [
+        "🐟 摸鱼日历",
+        "⏰ 下班倒计时",
+        "🎉 周末提醒"
+      ],
       "usage": "对白说「摸鱼」或「距离周末还有几天」",
-      "commands": ["摸鱼", "摸鱼日历"],
+      "commands": [
+        "摸鱼",
+        "摸鱼日历"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 4521,
       "rating": 4.9,
@@ -174,11 +300,27 @@
       "description": "随机生成励志名言、毒鸡汤或名人名言",
       "full_description": "名言生成器，包含励志名言、毒鸡汤、名人名言等多种类型，每天一句正能量或反向激励。",
       "category": "娱乐游戏",
-      "keywords": ["名言", "鸡汤", "励志"],
-      "triggers": ["名言", "鸡汤", "励志"],
-      "features": ["📜 多种类型", "🎲 随机生成", "💡 每日一句"],
+      "keywords": [
+        "名言",
+        "鸡汤",
+        "励志"
+      ],
+      "triggers": [
+        "名言",
+        "鸡汤",
+        "励志"
+      ],
+      "features": [
+        "📜 多种类型",
+        "🎲 随机生成",
+        "💡 每日一句"
+      ],
       "usage": "对白说「来句名言」或「毒鸡汤」",
-      "commands": ["名言", "毒鸡汤", "励志名言"],
+      "commands": [
+        "名言",
+        "毒鸡汤",
+        "励志名言"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 1876,
       "rating": 4.5,
@@ -194,11 +336,26 @@
       "description": "中英文快速互译",
       "full_description": "快速翻译插件，支持中英文互译，简单快捷。",
       "category": "翻译语言",
-      "keywords": ["翻译", "英语", "中文"],
-      "triggers": ["翻译", "translate"],
-      "features": ["🌐 中英互译", "⚡ 快速响应", "📝 简洁输出"],
+      "keywords": [
+        "翻译",
+        "英语",
+        "中文"
+      ],
+      "triggers": [
+        "翻译",
+        "translate"
+      ],
+      "features": [
+        "🌐 中英互译",
+        "⚡ 快速响应",
+        "📝 简洁输出"
+      ],
       "usage": "对白说「翻译 hello world」",
-      "commands": ["翻译", "翻译成英文", "翻译成中文"],
+      "commands": [
+        "翻译",
+        "翻译成英文",
+        "翻译成中文"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 2943,
       "rating": 4.6,
@@ -214,11 +371,25 @@
       "description": "数学计算器，支持基础运算和科学计算",
       "full_description": "计算器插件，支持加减乘除、括号、幂运算等，快速得出计算结果。",
       "category": "实用工具",
-      "keywords": ["计算", "数学", "calculator"],
-      "triggers": ["计算", "算一下"],
-      "features": ["🔢 基础运算", "📐 科学计算", "⚡ 即时结果"],
+      "keywords": [
+        "计算",
+        "数学",
+        "calculator"
+      ],
+      "triggers": [
+        "计算",
+        "算一下"
+      ],
+      "features": [
+        "🔢 基础运算",
+        "📐 科学计算",
+        "⚡ 即时结果"
+      ],
       "usage": "对白说「计算 (1+2)*3」",
-      "commands": ["计算", "算一下"],
+      "commands": [
+        "计算",
+        "算一下"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 1567,
       "rating": 4.4,
@@ -234,16 +405,47 @@
       "description": "查询十二星座今日运势",
       "full_description": "星座运势插件，查询十二星座的今日运势、爱情运、事业运等。",
       "category": "娱乐游戏",
-      "keywords": ["星座", "运势", "zodiac"],
-      "triggers": ["星座", "白羊座", "金牛座"],
-      "features": ["⭐ 十二星座", "💕 爱情运势", "💼 事业运势"],
+      "keywords": [
+        "星座",
+        "运势",
+        "zodiac"
+      ],
+      "triggers": [
+        "星座",
+        "白羊座",
+        "金牛座"
+      ],
+      "features": [
+        "⭐ 十二星座",
+        "💕 爱情运势",
+        "💼 事业运势"
+      ],
       "usage": "对白说「白羊座运势」",
-      "commands": ["XX座运势", "星座运势"],
+      "commands": [
+        "XX座运势",
+        "星座运势"
+      ],
       "changelog": "v1.0.0 - 初始版本",
       "downloads": 2341,
       "rating": 4.6,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/zodiac"
+    },
+    {
+      "id": "test_plugin_1768573443",
+      "name": "Test Plugin",
+      "cn_name": "测试插件",
+      "version": "1.0.0",
+      "author": "TestUser",
+      "author_key": "d8412aa657953383",
+      "description": "这是一个测试插件，用于验证添加功能",
+      "category": "实用工具",
+      "featured": false,
+      "commands": [
+        "测试",
+        "test"
+      ],
+      "created_at": "2026-01-16"
     }
   ]
 }
