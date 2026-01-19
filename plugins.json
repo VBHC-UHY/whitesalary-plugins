@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "last_updated": "2026-01-16T22:27:37Z",
+  "last_updated": "2026-01-20",
   "total_count": 12,
   "plugins": [
     {
@@ -430,6 +430,31 @@
       "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/zodiac"
+    },
+    {
+      "id": "weather_query",
+      "name": "weather_query",
+      "cn_name": "天气查询插件",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "查询天气信息，支持关键词触发",
+      "full_description": "当用户询问天气时，返回模拟的天气信息",
+      "category": "utility",
+      "keywords": [],
+      "triggers": [],
+      "features": [
+        "天气查询",
+        "温度显示",
+        "天气描述"
+      ],
+      "usage": "直接说'天气'、'气温'等关键词即可",
+      "commands": [],
+      "changelog": "1.0.0: 初始版本",
+      "notes": "模拟数据，仅供演示",
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": false,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/weather_query"
     }
   ]
 }
