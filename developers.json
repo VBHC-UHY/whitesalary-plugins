@@ -7,6 +7,14 @@
       "status": "approved",
       "created_at": "2026-04-01",
       "plugins_submitted": []
+    },
+    "test_sync": {
+      "username": "test_sync",
+      "password_hash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "role": "developer",
+      "status": "pending",
+      "created_at": "2026-04-01 10:10",
+      "plugins_submitted": []
     }
   },
   "tokens": {}
