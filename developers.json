@@ -1,0 +1,13 @@
+{
+  "developers": {
+    "admin": {
+      "username": "admin",
+      "password_hash": "b6b5bd5e3bdc72e4eacbd318e223d3b15b46e1030726318d7f5dfd5100dc4a14",
+      "role": "super_admin",
+      "status": "approved",
+      "created_at": "2026-04-01",
+      "plugins_submitted": []
+    }
+  },
+  "tokens": {}
+}
