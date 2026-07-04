@@ -1,437 +1,148 @@
 {
-  "version": "1.0.0",
-  "last_updated": "2026-01-20",
-  "total_count": 12,
+  "version": "2.0.0",
+  "schema_version": 2,
+  "last_updated": "2026-07-04",
+  "total_count": 13,
   "plugins": [
     {
-      "id": "daily_fortune",
-      "name": "daily_fortune",
-      "cn_name": "每日运势",
-      "version": "1.0.0",
-      "author": "WhiteSalary",
-      "description": "每天为用户生成专属运势预测，包含运势、幸运数字、幸运颜色",
-      "full_description": "每日运势插件为白提供了生成个性化每日运势的能力。每天为用户生成独特的运势预测，包括整体运势、爱情运势、财运、事业运势等多个维度，让白成为用户的专属运势顾问。",
-      "category": "娱乐游戏",
-      "keywords": [
-        "运势",
-        "算命",
-        "占卜",
-        "fortune"
-      ],
-      "triggers": [
-        "今日运势",
-        "运势",
-        "算卦",
-        "今天运气"
-      ],
-      "features": [
-        "🔮 多维度运势预测",
-        "🎨 幸运颜色推荐",
-        "🔢 幸运数字生成"
-      ],
-      "usage": "对白说「今日运势」即可",
-      "commands": [
-        "今日运势",
-        "运势",
-        "算卦"
-      ],
-      "changelog": "v1.0.0 - 初始版本",
-      "notes": "运势仅供娱乐参考",
-      "downloads": 0,
-      "rating": 5.0,
-      "featured": true,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/daily_fortune"
-    },
-    {
-      "id": "weather",
-      "name": "weather",
-      "cn_name": "天气查询",
-      "version": "1.0.0",
-      "author": "WhiteSalary",
-      "description": "查询指定城市的天气（模拟数据）",
-      "full_description": "天气查询插件让白能够查询全国各地的实时天气信息。支持查询当前天气、温度、湿度等信息。",
-      "category": "天气日历",
-      "keywords": [
-        "天气",
-        "气温",
-        "weather"
-      ],
-      "triggers": [
-        "天气",
-        "气温",
-        "温度"
-      ],
-      "features": [
-        "🌡️ 实时天气查询",
-        "💨 风力湿度信息",
-        "🌍 支持多城市"
-      ],
-      "usage": "对白说「北京天气」即可",
-      "commands": [
-        "天气",
-        "XX天气"
-      ],
-      "changelog": "v1.0.0 - 初始版本",
-      "notes": "天气数据为模拟数据",
-      "downloads": 0,
-      "rating": 5.0,
-      "featured": true,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/weather"
-    },
-    {
-      "id": "dice_roll",
-      "name": "dice_roll",
-      "cn_name": "骰子游戏",
-      "version": "1.0.0",
-      "author": "WhiteSalary",
-      "description": "掷骰子游戏，支持自定义骰子数量和面数",
-      "full_description": "骰子插件为白添加了掷骰子功能，支持各种骰子类型，可用于桌游、决策或纯粹的娱乐。",
-      "category": "娱乐游戏",
-      "keywords": [
-        "骰子",
-        "掷骰",
-        "dice"
-      ],
-      "triggers": [
-        "掷骰子",
-        "投骰子",
-        "roll"
-      ],
-      "features": [
-        "🎲 多种骰子支持",
-        "🔢 自定义面数",
-        "📊 结果统计"
-      ],
-      "usage": "对白说「掷骰子」或「roll 2d6」",
-      "commands": [
-        "掷骰子",
-        "roll",
-        "1d6"
-      ],
-      "changelog": "v1.0.0 - 初始版本",
-      "downloads": 0,
-      "rating": 5.0,
-      "featured": true,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/dice_roll"
-    },
-    {
-      "id": "random_choice",
-      "name": "random_choice",
-      "cn_name": "随机选择",
-      "version": "1.0.0",
-      "author": "WhiteSalary",
-      "description": "帮你做选择！支持多选项随机抽取",
-      "full_description": "当你犹豫不决时，让白帮你做选择！支持输入多个选项，随机抽取一个结果。",
-      "category": "实用工具",
-      "keywords": [
-        "随机",
-        "选择",
-        "抽签"
-      ],
-      "triggers": [
-        "帮我选",
-        "随机选择",
-        "选一个"
-      ],
-      "features": [
-        "🎯 多选项支持",
-        "⚡ 快速决策",
-        "🔀 公平随机"
-      ],
-      "usage": "对白说「帮我选 吃火锅 吃烧烤 吃面条」",
-      "commands": [
-        "帮我选",
-        "随机选择"
-      ],
-      "changelog": "v1.0.0 - 初始版本",
-      "downloads": 0,
-      "rating": 5.0,
-      "featured": false,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/random_choice"
-    },
-    {
+      "schema_version": 2,
       "id": "countdown",
       "name": "countdown",
       "cn_name": "倒数计时",
       "version": "1.0.0",
       "author": "WhiteSalary",
       "description": "计算距离特定日期还有多少天",
-      "full_description": "倒数计时插件可以帮你计算距离某个重要日期还有多少天，比如生日、节日、考试等。",
+      "full_description": "计算距离特定日期还有多少天",
       "category": "天气日历",
-      "keywords": [
-        "倒数",
-        "计时",
-        "日期"
-      ],
+      "keywords": [],
       "triggers": [
         "倒数",
         "还有几天",
         "距离"
       ],
-      "features": [
-        "📅 日期计算",
-        "⏰ 精确到天",
-        "🎯 重要日期提醒"
-      ],
-      "usage": "对白说「距离2026年春节还有几天」",
+      "features": [],
+      "usage": "",
       "commands": [
         "倒数",
-        "距离XX还有几天"
+        "还有几天",
+        "距离"
       ],
-      "changelog": "v1.0.0 - 初始版本",
+      "changelog": "",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
       "downloads": 0,
       "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/countdown"
     },
     {
-      "id": "rainbow_fart",
-      "name": "rainbow_fart",
-      "cn_name": "彩虹屁生成",
-      "version": "1.0.0",
-      "author": "WhiteSalary",
-      "description": "生成各种花式夸人彩虹屁",
-      "full_description": "彩虹屁生成器，让白用各种花式语言夸奖你或你指定的人，适合发朋友圈或哄人开心。",
-      "category": "社交互动",
-      "keywords": [
-        "彩虹屁",
-        "夸人",
-        "表扬"
-      ],
-      "triggers": [
-        "夸我",
-        "彩虹屁",
-        "夸夸"
-      ],
-      "features": [
-        "🌈 多种风格",
-        "💬 随机生成",
-        "😊 正能量满满"
-      ],
-      "usage": "对白说「夸我」或「给XX一个彩虹屁」",
-      "commands": [
-        "夸我",
-        "彩虹屁",
-        "夸夸我"
-      ],
-      "changelog": "v1.0.0 - 初始版本",
-      "downloads": 0,
-      "rating": 5.0,
-      "featured": false,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/rainbow_fart"
-    },
-    {
-      "id": "kaomoji",
-      "name": "kaomoji",
-      "cn_name": "颜文字生成",
-      "version": "1.0.0",
-      "author": "WhiteSalary",
-      "description": "生成各种可爱的颜文字表情",
-      "full_description": "颜文字生成器，收录了数百种可爱的颜文字表情，按心情分类，随时调用。",
-      "category": "社交互动",
-      "keywords": [
-        "颜文字",
-        "表情",
-        "kaomoji"
-      ],
-      "triggers": [
-        "颜文字",
-        "表情",
-        "kaomoji"
-      ],
-      "features": [
-        "😊 多种表情",
-        "🎭 按心情分类",
-        "📋 一键复制"
-      ],
-      "usage": "对白说「来个开心的颜文字」",
-      "commands": [
-        "颜文字",
-        "开心表情",
-        "难过表情"
-      ],
-      "changelog": "v1.0.0 - 初始版本",
-      "downloads": 0,
-      "rating": 5.0,
-      "featured": false,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/kaomoji"
-    },
-    {
-      "id": "moyu_reminder",
-      "name": "moyu_reminder",
-      "cn_name": "摸鱼提醒",
-      "version": "1.0.0",
-      "author": "WhiteSalary",
-      "description": "摸鱼人专属！提醒你今天是周几，距离周末还有多久",
-      "full_description": "专为打工人设计的摸鱼提醒插件，告诉你今天周几、距离下班还有多久、距离周末还有几天。",
-      "category": "实用工具",
-      "keywords": [
-        "摸鱼",
-        "打工",
-        "周末"
-      ],
-      "triggers": [
-        "摸鱼",
-        "周末",
-        "下班"
-      ],
-      "features": [
-        "🐟 摸鱼日历",
-        "⏰ 下班倒计时",
-        "🎉 周末提醒"
-      ],
-      "usage": "对白说「摸鱼」或「距离周末还有几天」",
-      "commands": [
-        "摸鱼",
-        "摸鱼日历"
-      ],
-      "changelog": "v1.0.0 - 初始版本",
-      "downloads": 0,
-      "rating": 5.0,
-      "featured": false,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/moyu_reminder"
-    },
-    {
+      "schema_version": 2,
       "id": "quote_gen",
       "name": "quote_gen",
       "cn_name": "名言生成",
       "version": "1.0.0",
       "author": "WhiteSalary",
       "description": "随机生成励志名言、毒鸡汤或名人名言",
-      "full_description": "名言生成器，包含励志名言、毒鸡汤、名人名言等多种类型，每天一句正能量或反向激励。",
+      "full_description": "随机生成励志名言、毒鸡汤或名人名言",
       "category": "娱乐游戏",
-      "keywords": [
-        "名言",
-        "鸡汤",
-        "励志"
-      ],
+      "keywords": [],
       "triggers": [
         "名言",
         "鸡汤",
         "励志"
       ],
-      "features": [
-        "📜 多种类型",
-        "🎲 随机生成",
-        "💡 每日一句"
-      ],
-      "usage": "对白说「来句名言」或「毒鸡汤」",
+      "features": [],
+      "usage": "",
       "commands": [
         "名言",
-        "毒鸡汤",
-        "励志名言"
+        "鸡汤",
+        "励志"
       ],
-      "changelog": "v1.0.0 - 初始版本",
+      "changelog": "",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
       "downloads": 0,
       "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/quote_gen"
     },
     {
-      "id": "translator",
-      "name": "translator",
-      "cn_name": "快速翻译",
+      "schema_version": 2,
+      "id": "weather",
+      "name": "Weather",
+      "cn_name": "天气查询",
       "version": "1.0.0",
       "author": "WhiteSalary",
-      "description": "中英文快速互译",
-      "full_description": "快速翻译插件，支持中英文互译，简单快捷。",
-      "category": "翻译语言",
+      "description": "查询全国各地实时天气信息，支持未来天气预报",
+      "full_description": "天气查询插件让白能够查询全国各地的实时天气信息。支持查询当前天气、未来天气预报，提供温度、湿度、风力、空气质量等详细信息，让用户随时掌握天气动态。",
+      "category": "信息",
       "keywords": [
-        "翻译",
-        "英语",
-        "中文"
+        "天气",
+        "气温",
+        "weather",
+        "温度",
+        "预报"
       ],
       "triggers": [
-        "翻译",
-        "translate"
+        "天气",
+        "气温",
+        "温度怎么样"
       ],
       "features": [
-        "🌐 中英互译",
-        "⚡ 快速响应",
-        "📝 简洁输出"
+        "🌡️ 实时天气查询",
+        "📊 未来7天天气预报",
+        "💨 风力、湿度、空气质量",
+        "🌍 支持全国城市"
       ],
-      "usage": "对白说「翻译 hello world」",
+      "usage": "对白说「北京天气」「查一下上海今天天气」等即可触发",
       "commands": [
-        "翻译",
-        "翻译成英文",
-        "翻译成中文"
+        "天气",
+        "XX天气",
+        "查天气"
       ],
-      "changelog": "v1.0.0 - 初始版本",
+      "changelog": "v1.0.0 - 初始版本，支持基础天气查询",
+      "notes": "天气数据来自第三方API，可能存在少许延迟",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
       "downloads": 0,
       "rating": 5.0,
-      "featured": false,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/translator"
+      "featured": true,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/weather"
     },
     {
-      "id": "calculator",
-      "name": "calculator",
-      "cn_name": "计算器",
-      "version": "1.0.0",
-      "author": "WhiteSalary",
-      "description": "数学计算器，支持基础运算和科学计算",
-      "full_description": "计算器插件，支持加减乘除、括号、幂运算等，快速得出计算结果。",
-      "category": "实用工具",
-      "keywords": [
-        "计算",
-        "数学",
-        "calculator"
-      ],
-      "triggers": [
-        "计算",
-        "算一下"
-      ],
-      "features": [
-        "🔢 基础运算",
-        "📐 科学计算",
-        "⚡ 即时结果"
-      ],
-      "usage": "对白说「计算 (1+2)*3」",
-      "commands": [
-        "计算",
-        "算一下"
-      ],
-      "changelog": "v1.0.0 - 初始版本",
-      "downloads": 0,
-      "rating": 5.0,
-      "featured": false,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/calculator"
-    },
-    {
-      "id": "zodiac",
-      "name": "zodiac",
-      "cn_name": "星座运势",
-      "version": "1.0.0",
-      "author": "WhiteSalary",
-      "description": "查询十二星座今日运势",
-      "full_description": "星座运势插件，查询十二星座的今日运势、爱情运、事业运等。",
-      "category": "娱乐游戏",
-      "keywords": [
-        "星座",
-        "运势",
-        "zodiac"
-      ],
-      "triggers": [
-        "星座",
-        "白羊座",
-        "金牛座"
-      ],
-      "features": [
-        "⭐ 十二星座",
-        "💕 爱情运势",
-        "💼 事业运势"
-      ],
-      "usage": "对白说「白羊座运势」",
-      "commands": [
-        "XX座运势",
-        "星座运势"
-      ],
-      "changelog": "v1.0.0 - 初始版本",
-      "downloads": 0,
-      "rating": 5.0,
-      "featured": false,
-      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/zodiac"
-    },
-    {
+      "schema_version": 2,
       "id": "weather_query",
       "name": "weather_query",
       "cn_name": "天气查询插件",
@@ -451,10 +162,442 @@
       "commands": [],
       "changelog": "1.0.0: 初始版本",
       "notes": "模拟数据，仅供演示",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
       "downloads": 0,
       "rating": 5.0,
       "featured": false,
       "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/weather_query"
+    },
+    {
+      "schema_version": 2,
+      "id": "rainbow_fart",
+      "name": "rainbow_fart",
+      "cn_name": "彩虹屁生成",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "生成各种花式夸人彩虹屁",
+      "full_description": "生成各种花式夸人彩虹屁",
+      "category": "社交互动",
+      "keywords": [],
+      "triggers": [
+        "夸我",
+        "彩虹屁",
+        "夸夸"
+      ],
+      "features": [],
+      "usage": "",
+      "commands": [
+        "夸我",
+        "彩虹屁",
+        "夸夸"
+      ],
+      "changelog": "",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": false,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/rainbow_fart"
+    },
+    {
+      "schema_version": 2,
+      "id": "translator",
+      "name": "translator",
+      "cn_name": "快速翻译",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "中英文快速互译",
+      "full_description": "中英文快速互译",
+      "category": "翻译语言",
+      "keywords": [],
+      "triggers": [
+        "翻译",
+        "translate"
+      ],
+      "features": [],
+      "usage": "",
+      "commands": [
+        "翻译",
+        "translate"
+      ],
+      "changelog": "",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": false,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/translator"
+    },
+    {
+      "schema_version": 2,
+      "id": "moyu_reminder",
+      "name": "moyu_reminder",
+      "cn_name": "摸鱼提醒",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "摸鱼人专属！提醒你今天是周几，距离周末还有多久",
+      "full_description": "摸鱼人专属！提醒你今天是周几，距离周末还有多久",
+      "category": "实用工具",
+      "keywords": [],
+      "triggers": [
+        "摸鱼",
+        "周末",
+        "下班"
+      ],
+      "features": [],
+      "usage": "",
+      "commands": [
+        "摸鱼",
+        "周末",
+        "下班"
+      ],
+      "changelog": "",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": false,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/moyu_reminder"
+    },
+    {
+      "schema_version": 2,
+      "id": "zodiac",
+      "name": "zodiac",
+      "cn_name": "星座运势",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "查询十二星座今日运势",
+      "full_description": "查询十二星座今日运势",
+      "category": "娱乐游戏",
+      "keywords": [],
+      "triggers": [
+        "星座",
+        "白羊座",
+        "金牛座",
+        "双子座",
+        "巨蟹座",
+        "狮子座",
+        "处女座",
+        "天秤座",
+        "天蝎座",
+        "射手座",
+        "摩羯座",
+        "水瓶座",
+        "双鱼座"
+      ],
+      "features": [],
+      "usage": "",
+      "commands": [
+        "星座",
+        "白羊座",
+        "金牛座",
+        "双子座",
+        "巨蟹座",
+        "狮子座",
+        "处女座",
+        "天秤座",
+        "天蝎座",
+        "射手座",
+        "摩羯座",
+        "水瓶座",
+        "双鱼座"
+      ],
+      "changelog": "",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": false,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/zodiac"
+    },
+    {
+      "schema_version": 2,
+      "id": "daily_fortune",
+      "name": "Daily Fortune",
+      "cn_name": "每日运势",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "每天为用户生成专属运势预测，包括整体运势、爱情、财运等",
+      "full_description": "每日运势插件为白提供了生成个性化每日运势的能力。每天为用户生成独特的运势预测，包括整体运势、爱情运势、财运、事业运势等多个维度，让白成为用户的专属运势顾问。",
+      "category": "娱乐",
+      "keywords": [
+        "运势",
+        "算命",
+        "占卜",
+        "fortune"
+      ],
+      "triggers": [
+        "今日运势",
+        "运势",
+        "算卦",
+        "今天运气"
+      ],
+      "features": [
+        "🔮 多维度运势预测（整体、爱情、财运、事业）",
+        "🎨 精美的运势卡片展示",
+        "📅 每日自动更新",
+        "🎲 随机幸运数字和颜色"
+      ],
+      "usage": "对白说「今日运势」「看看我的运气」「帮我算一卦」等即可触发",
+      "commands": [
+        "今日运势",
+        "运势",
+        "算卦",
+        "今天运气怎么样"
+      ],
+      "changelog": "v1.0.0 - 初始版本，支持基础运势预测",
+      "notes": "运势仅供娱乐参考，请勿过度依赖",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": true,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/daily_fortune"
+    },
+    {
+      "schema_version": 2,
+      "id": "calculator",
+      "name": "calculator",
+      "cn_name": "计算器",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "数学计算器，支持基础运算和科学计算",
+      "full_description": "数学计算器，支持基础运算和科学计算",
+      "category": "实用工具",
+      "keywords": [],
+      "triggers": [
+        "计算",
+        "算一下"
+      ],
+      "features": [],
+      "usage": "",
+      "commands": [
+        "计算",
+        "算一下"
+      ],
+      "changelog": "",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": false,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/calculator"
+    },
+    {
+      "schema_version": 2,
+      "id": "random_choice",
+      "name": "random_choice",
+      "cn_name": "随机选择",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "帮你做选择！支持多选项随机抽取",
+      "full_description": "帮你做选择！支持多选项随机抽取",
+      "category": "实用工具",
+      "keywords": [],
+      "triggers": [
+        "帮我选",
+        "随机选择",
+        "选一个"
+      ],
+      "features": [],
+      "usage": "",
+      "commands": [
+        "帮我选",
+        "随机选择",
+        "选一个"
+      ],
+      "changelog": "",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": false,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/random_choice"
+    },
+    {
+      "schema_version": 2,
+      "id": "kaomoji",
+      "name": "kaomoji",
+      "cn_name": "颜文字生成",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "生成各种可爱的颜文字表情",
+      "full_description": "生成各种可爱的颜文字表情",
+      "category": "社交互动",
+      "keywords": [],
+      "triggers": [
+        "颜文字",
+        "表情",
+        "kaomoji"
+      ],
+      "features": [],
+      "usage": "",
+      "commands": [
+        "颜文字",
+        "表情",
+        "kaomoji"
+      ],
+      "changelog": "",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": false,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/kaomoji"
+    },
+    {
+      "schema_version": 2,
+      "id": "dice_roll",
+      "name": "Dice Roll",
+      "cn_name": "骰子",
+      "version": "1.0.0",
+      "author": "WhiteSalary",
+      "description": "支持多种骰子的投掷功能，可用于桌游或决策",
+      "full_description": "骰子插件为白添加了掷骰子功能，支持各种骰子类型（D4、D6、D8、D10、D12、D20等），可用于桌游、决策或纯粹的娱乐。支持多骰子投掷和自定义面数。",
+      "category": "娱乐",
+      "keywords": [
+        "骰子",
+        "掷骰",
+        "dice",
+        "roll",
+        "桌游"
+      ],
+      "triggers": [
+        "掷骰子",
+        "投骰子",
+        "roll",
+        "扔骰子"
+      ],
+      "features": [
+        "🎲 多种骰子类型支持",
+        "🔢 支持多骰子同时投掷",
+        "⚙️ 自定义骰子面数",
+        "📊 投掷结果统计"
+      ],
+      "usage": "对白说「掷骰子」「投1d20」「扔3个六面骰」等即可触发",
+      "commands": [
+        "掷骰子",
+        "投骰子",
+        "roll",
+        "1d6",
+        "2d20"
+      ],
+      "changelog": "v1.0.0 - 初始版本，支持基础骰子投掷",
+      "notes": "",
+      "roles": [
+        "interceptor",
+        "rewriter",
+        "tool_provider"
+      ],
+      "platforms": [
+        "all"
+      ],
+      "permissions": [],
+      "requires_service": [],
+      "dependencies": {},
+      "assets": [],
+      "downloads": 0,
+      "rating": 5.0,
+      "featured": true,
+      "download_url": "https://raw.githubusercontent.com/VBHC-UHY/whitesalary-plugins/main/plugins/dice_roll"
     }
   ]
 }

@@ -1,188 +1,201 @@
-# 🛠️ 插件開發指南
+# 贡献插件说明
 
-歡迎為白開發插件！本指南將幫助你快速上手。
+这个仓库是 White Salary 的公开插件市场数据源。浏览器展示市场、浏览器上传市场、桌面端插件市场都会读取这里的 `plugins.json` 和 `plugins/<插件ID>/`。
 
-## 📋 插件結構
+## 插件应该放哪里
 
-每個插件必須包含以下文件：
+标准目录：
 
+```text
+plugins/<plugin_id>/
+├── plugin.py       # 必需，插件主代码
+├── config.json     # 必需，插件元数据
+├── assets/...      # 可选，图片/模型/音频等资源
+├── prompts/...     # 可选，提示词或文本资源
+└── README.md       # 可选，插件说明
 ```
-your_plugin/
-├── plugin.py      # 主程序文件（必需）
-├── config.json    # 插件配置（必需）
-└── README.md      # 說明文檔（推薦）
+
+`plugin_id` 只能使用小写字母、数字、下划线，并且必须以字母开头，例如 `daily_fortune`。
+
+## 当前插件接口
+
+请使用当前 White Salary 接口，不要使用旧的 `src.core.plugins.base.BasePlugin`。
+
+最小示例：
+
+```python
+# -*- coding: utf-8 -*-
+from typing import Optional
+
+from white_salary.core.plugins.base import Plugin, PluginMeta
+
+
+class ExamplePlugin(Plugin):
+    meta = PluginMeta(
+        name="example_plugin",
+        version="1.0.0",
+        author="your-name",
+        description="示例插件",
+        roles=["interceptor"],
+    )
+
+    async def on_message(self, text: str, user_id: str = "") -> Optional[str]:
+        if "示例" in text:
+            return "这是插件回复"
+        return None
+
+
+Plugin = ExamplePlugin
 ```
 
-## 📝 config.json 格式
+## 插件角色
+
+`roles` 用来告诉运行时这个插件参与哪一段链路。
+
+| 角色 | 作用 |
+|------|------|
+| `interceptor` | 通过 `on_message()` 抢答或拦截用户消息 |
+| `rewriter` | 通过 `on_reply()` 改写 AI 最终回复 |
+| `tool_provider` | 通过 `get_tools()` 注册工具给 ToolRegistry |
+| `observer` | 通过 `on_observe()` 观察/学习消息，不抢答、不改写、不注册工具 |
+
+旧插件不写 `roles` 时，会按 `interceptor + rewriter + tool_provider` 兼容运行。
+
+工具插件示例：
+
+```python
+from white_salary.core.plugins.base import Plugin, PluginMeta
+
+
+class RollDicePlugin(Plugin):
+    meta = PluginMeta(
+        name="roll_dice",
+        version="1.0.0",
+        author="your-name",
+        description="骰子工具",
+        roles=["tool_provider"],
+    )
+
+    def get_tools(self):
+        return [
+            {
+                "name": "roll_dice",
+                "description": "掷一个指定面数的骰子",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "sides": {"type": "integer", "description": "骰子面数"}
+                    },
+                    "required": ["sides"],
+                },
+                "handler": self.roll_dice,
+            }
+        ]
+
+    async def roll_dice(self, sides: int = 6):
+        import random
+        return random.randint(1, max(2, int(sides)))
+
+
+Plugin = RollDicePlugin
+```
+
+观察插件示例：
+
+```python
+from white_salary.core.plugins.base import Plugin, PluginMeta
+
+
+class MoodObserverPlugin(Plugin):
+    meta = PluginMeta(
+        name="mood_observer",
+        version="1.0.0",
+        author="your-name",
+        description="只观察聊天氛围，不抢答",
+        roles=["observer"],
+    )
+
+    async def on_observe(self, text: str, user_id: str = "", metadata: dict | None = None):
+        # 这里可以记录统计信息，但不要回复用户
+        return None
+
+
+Plugin = MoodObserverPlugin
+```
+
+## config.json
+
+推荐 schema v2：
 
 ```json
 {
-    "id": "your_plugin_id",
-    "name": "插件英文名",
-    "cn_name": "插件中文名",
-    "version": "1.0.0",
-    "author": "你的名字",
-    "description": "插件的簡短描述",
-    "category": "娱乐",
-    "keywords": ["关键词1", "关键词2"],
-    "triggers": ["触发词1", "触发词2"],
-    "features": [
-        "功能特色1",
-        "功能特色2"
-    ],
-    "usage": "使用方法說明",
-    "changelog": "v1.0.0 - 初始版本"
+  "schema_version": 2,
+  "id": "example_plugin",
+  "name": "example_plugin",
+  "cn_name": "示例插件",
+  "version": "1.0.0",
+  "author": "your-name",
+  "description": "一句话说明插件做什么",
+  "full_description": "更详细的介绍",
+  "category": "实用工具",
+  "keywords": ["示例"],
+  "triggers": ["示例"],
+  "features": ["演示插件结构"],
+  "usage": "对白说「示例」即可触发",
+  "commands": ["示例"],
+  "changelog": "v1.0.0 - 初始版本",
+  "notes": "",
+  "roles": ["interceptor"],
+  "platforms": ["qq", "desktop"],
+  "permissions": [],
+  "requires_service": [],
+  "dependencies": {
+    "python": []
+  },
+  "assets": []
 }
 ```
 
-### 可用分類 (category)
-- `娱乐` - 遊戲、運勢等娛樂功能
-- `工具` - 實用工具類
-- `信息` - 資訊查詢類
-- `社交` - 社交互動類
-- `媒体` - 圖片、音樂、視頻相關
-- `自动化` - 自動化任務
+字段说明：
 
-## 🐍 plugin.py 模板
+| 字段 | 说明 |
+|------|------|
+| `roles` | 插件参与的链路角色 |
+| `platforms` | 适用平台，例如 `qq`、`desktop`、`bilibili`、`qzone`、`server`、`all` |
+| `permissions` | 需要提示用户的权限，例如 `owner`、`admin`、`network`、`filesystem` |
+| `requires_service` | 依赖的外部服务，例如 `napcat`、`comfyui`、`siliconflow` |
+| `dependencies` | 额外 Python 依赖声明，只用于展示和安装前提示 |
+| `assets` | 需要随插件下载的资源文件路径，必须是插件目录内部相对路径 |
 
-```python
-"""
-插件名稱
-描述：這個插件做什麼
-作者：你的名字
-"""
+## 资源文件
 
-import re
-from typing import Optional, Dict, Any
+资源文件必须位于当前插件目录内，例如：
 
-
-class Plugin:
-    """插件主類"""
-    
-    def __init__(self):
-        self.name = "your_plugin"
-        self.cn_name = "插件中文名"
-        self.description = "插件描述"
-        self.version = "1.0.0"
-        self.author = "你的名字"
-        
-        # 觸發關鍵詞（正則表達式）
-        self.triggers = [
-            r"关键词1",
-            r"关键词2",
-        ]
-    
-    def can_handle(self, message: str) -> bool:
-        """檢查是否應該處理這條消息"""
-        for trigger in self.triggers:
-            if re.search(trigger, message, re.IGNORECASE):
-                return True
-        return False
-    
-    async def handle(self, message: str, context: Dict[str, Any]) -> Optional[str]:
-        """
-        處理消息並返回響應
-        
-        Args:
-            message: 用戶發送的消息
-            context: 上下文信息，包含：
-                - user_id: 用戶ID
-                - group_id: 群組ID（如果是群聊）
-                - is_owner: 是否是主人
-                - adapter: 適配器實例
-        
-        Returns:
-            響應文本，或 None 表示不響應
-        """
-        # 在這裡實現你的邏輯
-        return "這是插件的回覆！"
-
-
-# 導出插件實例
-plugin = Plugin()
+```json
+{
+  "assets": [
+    "assets/icon.png",
+    "prompts/system.md",
+    "docs/help.md"
+  ]
+}
 ```
 
-## 🔧 進階功能
+禁止使用绝对路径或 `..` 路径穿越。
 
-### 使用配置文件
-```python
-import json
-import os
+## 提交方式
 
-class Plugin:
-    def __init__(self):
-        # 加載配置
-        config_path = os.path.join(os.path.dirname(__file__), 'config.json')
-        with open(config_path, 'r', encoding='utf-8') as f:
-            self.config = json.load(f)
-```
+1. 在线提交：使用 [插件提交页面](https://whitesalary-plugins-web.vercel.app)。
+2. Pull Request：把插件目录提交到 `plugins/<plugin_id>/`。
+3. 本地同步：在 White Salary 桌面端/控制台里使用插件市场同步功能。
 
-### 持久化數據
-```python
-import json
-import os
+提交后仓库会自动运行脚本生成 `plugins.json`，浏览器市场和桌面端刷新后即可看到。
 
-class Plugin:
-    def save_data(self, data: dict):
-        """保存數據"""
-        data_path = os.path.join(os.path.dirname(__file__), 'data.json')
-        with open(data_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-    
-    def load_data(self) -> dict:
-        """加載數據"""
-        data_path = os.path.join(os.path.dirname(__file__), 'data.json')
-        if os.path.exists(data_path):
-            with open(data_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        return {}
-```
+## 检查清单
 
-### 使用外部 API
-```python
-import aiohttp
-
-async def fetch_data(url: str) -> dict:
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as response:
-            return await response.json()
-```
-
-## 📤 提交插件
-
-### 步驟
-1. **Fork** 本倉庫
-2. **創建**你的插件文件夾在 `plugins/` 目錄下
-3. **確保**包含 `plugin.py` 和 `config.json`
-4. **測試**你的插件能正常工作
-5. **提交** Pull Request
-
-### PR 標題格式
-```
-[新插件] 插件中文名 - 簡短描述
-```
-
-### 自動審核
-提交 PR 後，GitHub Actions 會自動：
-1. ✅ 檢查文件結構是否正確
-2. ✅ 驗證 config.json 格式
-3. ✅ 檢查 plugin.py 語法
-4. ✅ 通過後自動合併
-5. ✅ 自動更新插件列表
-
-## ❓ 常見問題
-
-### Q: 我的插件可以調用白的其他功能嗎？
-A: 可以！通過 `context['adapter']` 可以訪問適配器功能。
-
-### Q: 插件可以定時執行嗎？
-A: 目前不支持，但可以通過配合提醒功能實現類似效果。
-
-### Q: 如何調試插件？
-A: 在本地的 WhiteSalary `plugins/` 目錄下開發和測試。
-
----
-
-有問題？歡迎在 Issues 中提出！
-
-
+- `plugin.py` 能被 Python 正常导入。
+- `Plugin = YourPluginClass` 已导出。
+- `config.json` 的 `id` 与目录名一致。
+- 只声明实际需要的 `roles`。
+- 如果使用网络、文件、账号、截图、控制电脑等能力，在 `permissions` 中写清楚。
+- 如果需要 NapCat、ComfyUI、本地 TTS、云端 API 等服务，在 `requires_service` 中写清楚。
